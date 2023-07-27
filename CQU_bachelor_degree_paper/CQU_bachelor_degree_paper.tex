@@ -1,0 +1,134 @@
+\documentclass[12pt, a4paper, oneside]{ctexart}
+\usepackage{amsmath}  % 这是数学公式宏包
+\usepackage{geometry}  % 页边距宏包
+\usepackage{fontspec}  % 设置字体
+\usepackage{titlesec}  % 设置标题字体
+\usepackage{titletoc}  % 目录格式
+\usepackage{fancyhdr}  % 页眉页脚设置
+\usepackage{graphicx}  % 图片
+\usepackage{caption}  % 图片标题设置
+\usepackage{multirow}  % 表格单元格纵向合并
+\usepackage{tabularx}
+\usepackage{setspace}
+
+\newCJKfontfamily\SimHei{SimHei}  % 设置黑体
+\newCJKfontfamily\SimSun{SimSun}  % 设置宋体
+
+\geometry{top=30mm, left=35mm, right=25mm, bottom=25mm, headheight=16mm, footskip=10mm}  % 页边距设置
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
+\titleformat{\section}[block]{\SimHei\centering\fontsize{16pt}{20pt}}{\textbf{\thesection}}{0em}{\vspace{-5pt}}  % 16磅字体大小（三号），20pt行距
+\titleformat{\subsection}[block]{\SimHei\fontsize{15pt}{20pt}}{\textbf{\thesubsection}}{0em}{\vspace{-5pt}}
+\titleformat{\subsubsection}[block]{\SimHei\fontsize{14pt}{20pt}}{\textbf{\thesubsubsection}}{0em}{\vspace{-5pt}}
+% 三号对应16pt，小三15pt，四号14pt，小四12pt
+
+% 目录格式
+\titlecontents{section}[0.5cm]{\SimSun\fontsize{12pt}{20pt}}{\contentslabel{1em}}{}{\titlerule*[0.5pc]{$\cdot$}\contentspage}
+\titlecontents{subsection}[1.5cm]{\SimSun\fontsize{12pt}{20pt}}{\contentslabel{1.8em}}{}{\titlerule*[0.5pc]{$\cdot$}\contentspage}
+\titlecontents{subsubsection}[2.5cm]{\SimSun\fontsize{12pt}{20pt}}{\contentslabel{2.6em}}{}{\titlerule*[0.5pc]{$\cdot$}\contentspage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\SimSun\fontsize{10.5pt}{12.6pt} 这是论文题目}  % 左页眉
+\fancyhead[R]{\SimSun\fontsize{10.5pt}{12.6pt} \rightmark}  % 右页眉
+\renewcommand{\sectionmark}[1]{\markright{#1}}  % 每个section更新rightmark
+\fancyfoot[C]{\fontsize{10.5pt}{12.6pt} \thepage}  % 页码设置
+
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}  % 图片编号设置
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}  % 表格编号设置
+\captionsetup[figure]{font={small,stretch=2}}  % 五号，行距20pt
+\captionsetup[table]{font={small,stretch=2}}  % 五号，行距20pt
+\captionsetup[table]{justification=raggedright,singlelinecheck=false}  % 表格标题左对齐
+\setlength{\abovecaptionskip}{0pt}  % 图表标题与图标间距
+\setlength{\belowcaptionskip}{0pt}
+\newcolumntype{C}{>{\centering\arraybackslash}X} % 自定义居中对齐的列类型C
+\renewcommand{\arraystretch}{1.2}  % 表格的单元格高度
+\captionsetup[figure]{labelsep=space}  % 标题标号和标题文本间的连接符
+\captionsetup[table]{labelsep=space}  % 标题标号和标题文本间的连接符
+
+%\setlength{\parskip}{0pt}  % 段间距为0
+
+\title{重庆大学本科毕业论文\LaTeX 模板}
+\author{Jacken Wu}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+
+\section*{摘要}
+\markright{摘要}
+\addcontentsline{toc}{section}{摘要}
+\setcounter{page}{1}
+\pagenumbering{Roman}  % 页码改为罗马数字
+
+\newpage
+
+\addcontentsline{toc}{section}{目录}
+\SimSun{\tableofcontents}
+
+\newpage
+
+\section{这是第一章}
+\setcounter{page}{1}
+\pagenumbering{arabic}  % 页面改为阿拉伯数字
+
+\subsection{这是第一小节}
+
+\subsubsection{这是小小节}
+
+这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。
+
+这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。这是正文。
+
+\subsubsection{这也是小小节}
+
+正文。
+
+\begin{table}[htb]
+	\centering
+	\caption{这是一个表格}
+	\begin{tabularx}{\textwidth}{|C|C|C|}  % c居中，l左对齐，X填充，C自定义的居中填充
+		\hline
+		第一列 & 第二列 & 第三列 \\
+		\hline
+		\multicolumn{2}{|c|}{12} & 3 \\
+		\hline
+		\multirow{2}*{11} & 2 & 3 \\
+		\cline{2-3}
+		~ & 2 & 3 \\
+		\hline
+		1 & 2 & 3 \\
+		\hline
+	\end{tabularx}
+\end{table}
+
+\subsection{这是第二小节}
+
+这是一个公式：
+
+$$ z = \dfrac{x^2}{3 y_1^2 y_2^2} \eqno{(1.1)} $$
+
+\newpage
+
+\section{这是第二章}
+
+\subsection{程序员的自我修养}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.6\textwidth]{example-image}
+	\caption{这是图片的标题}
+	\label{2.1}
+\end{figure}
+
+图2.1为一个示例。
+
+\subsection{程序员的脱发治疗}
+
+没救了。
+
+\end{document}
